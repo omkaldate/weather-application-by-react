@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Layout wrap */
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Search bar */
+.search {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.searchTerm {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+}
+
+.searchButtom {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.searchButtom:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+/* Weather widget container */
+.widges {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Icon top */
+.weathericon {
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Float animation for icon */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.weatherInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.temperature span {
+  font-size: 56px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.description {
+  text-align: left;
+}
+
+.weatherCondition {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.place {
+  font-size: 15px;
+  color: #666;
+}
+
+.date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* Extra info section */
+.extraTemperature {
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+
+.tempMinMax {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.twoSidedSection {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 140px;
+  transition: transform 0.2s ease;
+}
+
+.twoSidedSection:hover {
+  transform: scale(1.05);
+}
+
+.extraInfoLeftSide {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }
